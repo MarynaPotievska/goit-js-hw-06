@@ -21,17 +21,17 @@ function createBoxes (amount) {
   boxes.append(...boxesArr);
 }
 
+function destroyBoxes () {
+  boxes.innerHTML = '';
+}
+
 buttons.forEach (button => {
-  button.addEventListener('click', () => {
-    buttons.forEach (button => {      
-      if (button.dataset === 'create') {
+  button.addEventListener('click', () => {        
+      if (button.dataset.create !== undefined) {
         createBoxes(Number(input.value));
       }
       else {
-        function destroyBoxes () {
-          boxes.forEach(box => box.remove());
-        }
+       destroyBoxes();
       }
-    })
   })
 })

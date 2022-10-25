@@ -20,7 +20,7 @@ const galleryListRef = document.querySelector('.gallery')
 const gallery = [];
 
 for (let i = 0; i < images.length; i += 1) {
-  const liTemplate = `<li class="item"><img src="${images[i].url}" alt="${images[i].alt}" class="img"></li>`;
+  const liTemplate = `<li class="item"><img src="${images[i].url}" alt="${images[i].alt}" width="450"></li>`;
   gallery.push(liTemplate);
 }
 
