@@ -6,4 +6,7 @@ const valuesRefs = {
 
 valuesRefs.inputValue.addEventListener('input', (event) => {
 	valuesRefs.outputValue.textContent = event.currentTarget.value;
+	if(event.currentTarget.value === '') {
+		valuesRefs.outputValue.textContent = 'Anonymous'
+	}
 });

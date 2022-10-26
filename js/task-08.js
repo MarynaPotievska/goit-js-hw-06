@@ -14,6 +14,7 @@ form.addEventListener('submit', (event) => {
 		password: formElts.password.value,
 	}
 
-	console.log( 'Email: ', formData.email, ', Password: ', formData.password);
+	console.log(formData);
+	console.log( `Email: ${formData.email}, Password: ${formData.password}.`);
 	event.currentTarget.reset();
 })
